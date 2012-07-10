@@ -7,15 +7,15 @@ rvm:
   - jruby-19mode
   - ruby-head
 gemfile:
-  - gemfiles/Gemfile.2.3.x
-  - gemfiles/Gemfile.3.0.x
-  - gemfiles/Gemfile.3.1.x
-  - gemfiles/Gemfile.edge
+  - Gemfile.2.3.x
+  - Gemfile.3.0.x
+  - Gemfile.3.1.x
+  - Gemfile.edge
 matrix:
   exclude:
     - rvm: 1.8.7
-      gemfile: gemfiles/Gemfile.edge
+      gemfile: Gemfile.edge
     - rvm: rbx-18mode
-      gemfile: gemfiles/Gemfile.edge
+      gemfile: Gemfile.edge
     - rvm: jruby-18mode
-      gemfile: gemfiles/Gemfile.edge
+      gemfile: Gemfile.edge
