@@ -1,0 +1,21 @@
+rvm:
+  - 1.8.7 # (current default)
+  - 1.9.3
+  - rbx-18mode
+  - rbx-19mode
+  - jruby-18mode
+  - jruby-19mode
+  - ruby-head
+gemfile:
+  - Gemfile.2.3.x
+  - Gemfile.3.0.x
+  - Gemfile.3.1.x
+  - Gemfile.edge
+matrix:
+  exclude:
+    - rvm: 1.8.7
+      gemfile: Gemfile.edge
+    - rvm: rbx-18mode
+      gemfile: Gemfile.edge
+    - rvm: jruby-18mode
+      gemfile: Gemfile.edge
