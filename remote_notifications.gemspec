@@ -14,4 +14,7 @@ Gem::Specification.new do |gem|
   gem.name          = "remote_notifications"
   gem.require_paths = ["lib"]
   gem.version       = RemoteNotifications::VERSION
+
+  gem.add_dependency "activesupport", ">= 3.0.15", "< 4.0"
+  gem.add_development_dependency "rspec"
 end
