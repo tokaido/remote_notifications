@@ -13,9 +13,9 @@ gemfile:
   - gemfiles/Gemfile.edge
 matrix:
   exclude:
-    - 1.8.7
-      gemfiles/Gemfile.edge
-    - rbx-18mode
-      gemfiles/Gemfile.edge
-    - jruby-18mode
-      gemfiles/Gemfile.edge
+    - rvm: 1.8.7
+      gemfile: gemfiles/Gemfile.edge
+    - rvm: rbx-18mode
+      gemfile: gemfiles/Gemfile.edge
+    - rvm: jruby-18mode
+      gemfile: gemfiles/Gemfile.edge
