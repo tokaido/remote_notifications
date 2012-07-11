@@ -30,3 +30,15 @@ module ActiveSupport
     end
   end
 end
+
+class RemoteNotifier
+  def start(name, id, payload)
+    serialized = serialize(name, id, Time.now, payload)
+    dispatch "before", serialized
+  end
+
+  def finish(name, id, payload)
+    serialized = serialize(name, id, Time.now, payload)
+    dispatch "after", serialized
+  end
+end
