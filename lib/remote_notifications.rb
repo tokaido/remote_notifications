@@ -42,3 +42,12 @@ class RemoteNotifier
     dispatch "after", serialized
   end
 end
+
+class RemoteSubscriber
+  def process(blob)
+    sequence, name, id, payload = deserialize(blob)
+    notifier = ActiveSupport::Notifications.notifier
+
+    notifier.send(sequence, name, id, payload)
+  end
+end
